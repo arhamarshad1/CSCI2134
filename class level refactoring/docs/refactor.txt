@@ -1,0 +1,50 @@
+List of Refactorings
+====================
+
+Name/Banner# of Developer 1: Arham Arshad B00768939
+Name/Banner# of Developer 2:
+
+Refactorings:
+=============
+
+0. EXAMPLE:  
+   File: SpressoBot.java, ChickenBot.java, AngryBot.java, TimBot.java
+   Location (method/approx. line #): getNextMove()
+   Issue Identified: Common code to check if move will result in
+                    energy use and decrement energyLevel if that 
+                    is the case
+   Description of fix:  Push the common code into TimBot.java, creating a
+                        protected method to be used instead.
+   Implemented: Yes (Completely, all tests pass)
+
+1. File: SpressoBot.java, ChickenBot.java, AngryBot.java, TimBot.java
+   Location (method/approx. line #): getNextMove()
+   Issue Identified: Common code to find move with lowest score.
+   Description of fix: Push the common code into Timbot.java, creating a new protected method called getLowestScoreMove().
+   Implemented: Yes (Completely, all tests pass)
+
+2. File: District.java
+   Location (method/approx. line #): doBattlePhase(), doFirePhase(), fireAtDistrict()
+   Issue Identified: The district class has more than one role (sensing and firing) which violates the SRP principle
+   Description of fix: The District class should be converted into two classes, one for sensing and one for firing.
+   Implemented: No
+
+3. File: DohNat.java
+   Location (method/approx. line #): doBattlePhase(), doFirePhase(), doDefensePhase
+   Issue Identified: Methods in DohNat.java have same implementation as in District.java.
+   Description of fix: Create an interface DohNat which implements overrided methods from District.java.
+   Implemented: No
+
+4. File: District.java
+   Location (method/approx. line #): hasTimBot(), hasSpresso(), moveTimBot(), fireAtDistrict()
+   Issue Identified: These methods are set as public which violate the Dependency Inversion Principle as they are not used outside the class
+   Description of fix: Encapsulate the methods by setting them to private rather than public
+   Implemented: Yes (Completely, all tests pass)
+
+5. File:
+   Location (method/approx. line #):
+   Issue Identified:
+   Description of fix:
+   Implemented:
+
+

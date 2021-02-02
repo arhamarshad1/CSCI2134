@@ -1,0 +1,86 @@
+Errors Found:
+
+Error #1
+Class Name: TimBot.java
+Method where bug was found: harvestSpresso()
+Line Number: 156
+Bug description: Wrong comparator operator which return energy level value >= 100.
+Bug fix description: Comparison should be energylevel > 99 instead of energy level < 99
+
+Error #2
+Class Name: ChickenBot.java
+Method where bug was found: getNextMove()
+Line Number: 50
+Bug description: Wrong comparator operator which causes energy level to become negative after ChickenBot is set up.
+Bug fix description: Comparison should be energylevel > 0 instead of energylevel >= 0
+
+
+Error #3
+Class Name: SpressoBot.java
+Method where bug was found: getNextMove()
+Line Number: 72
+Bug description: Wrong comparison of move with District.CURRENT, if the ChickenBot wants to move then should its energy level decrease therefore move cannot be equal to District.CURRENT.
+Bug fix description: move != District.CURRENT rather than move == District.CURRENT
+
+
+Error #4
+Class Name: AngryBot.java
+Method where bug was found: getNextMove()
+Line Number: 48
+Bug description: Wrong comparator operator which prevents it from entering the main loop in the getNextMove() method therefore causing the AngryBot to behave as a SpressoBot even though it has energy to move.
+Bug fix description: (energylevel > 2) rather than (energy level < 2)
+
+
+Error #5
+Class Name: BullyBot.java
+Method where bug was found: fireCannon()
+Line Number: 66
+Bug description: Wrong update of variable j. Since we initialized j = 0 then the value of j should be incremented rather than decremented to prevent an out of bounds error.
+Bug fix description: j++ rather than j--
+
+
+Error #6
+Class Name: BullyBot.java
+Method where bug was found: fireCannon()
+Line Number: 67
+Bug description: Wrong update of variable energylevel. Since the BullyBot will fire one shot in this scenario then its energy level should decrease rather than increase.
+Bug fix description: energylevel-- rather than energylevel++
+
+
+***Bugs found after Unit tests bugs were fixed****
+
+Error #7
+Class Name: DohNat.java
+Method where bug was found: doHarvestPhase()
+Line Number: 139 and 140
+Bug description: Wrong comparator operator causes out of bound index error
+Bug fix description: Comparison should be x < width and y < height rather than <=
+
+
+Error #8
+Class Name: District.java
+Method where bug was found: setTimbot()
+Line Number: 169
+Bug description: Wrong comparator operator setTimbot causes it to return false even though bot is not null.
+Bug fix description: Comparison should be bot != null rather than bot == null
+
+Error #9
+Class Name: DohNat.java
+Method where bug was found: getDistrict()
+Line Number: 164
+Bug description: Wrong variable used to compute wraparound for the y coordinate.
+Bug fix description: Variable should be height instead of width in line 164.
+
+Error #10
+Class Name: DohNat.java
+Method where bug was found: doMovePhase()
+Line Number: 92
+Bug description: Wrong initialization of int y in for loop.
+Bug fix description: Int y = 0 instead of int y = 1
+
+Error #11
+Class Name: District.java
+Method where bug was found: doMovePhase()
+Line Number: 198
+Bug description: Wrong comparator operator causes TimBot to not move.
+Bug fix description: If the TimBot wants to move then direction != CURRENT instead of direction == CURRENT

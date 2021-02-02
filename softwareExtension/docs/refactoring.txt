@@ -1,0 +1,10 @@
+List of refactorings:
+1) There is part of the code in the getNextMove() for ChickenBot and SpressoBot which is the same. Better implementation would be to move the duplicate code into the superclass (Timbot.java) and call the method in the subclass. 
+
+2) The District.java class has two implementations: one for attacking and one for sensing. Better idea would be convert the distract class into two classes so that it follows the SRP principle.
+
+3) Encapsulate routine methods in the District class (e.g hasSpresso(), hasTimBot(),moveTimBot()) because they are not intended to be used outside the class. Better idea would be to set those methods as private rather than public. This helps encapsulate any exposed variable. 
+
+4) Extend the District.java so that any new modifications required i.e adding a new plant type can easily be implemented. This implementation is part of the Open/Close principle.
+
+Refactoring #1 and #3 were implemented.

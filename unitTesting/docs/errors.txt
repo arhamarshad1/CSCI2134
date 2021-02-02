@@ -1,0 +1,47 @@
+Bug Report
+==========
+
+For each bug, please provide the following information:
+  - Class name
+  - Method name
+  - Test method name
+  - Message produced by the test method
+
+Example:
+Error 0:
+  Class: District
+  Method: setTimBot()
+  Test Method: setTimBot_districtNotEmpty()
+  Message: setTimBot() on non-empty district returned true
+
+
+*********** ADD AS MANY MORE AS NEEDED *******************
+Error 1:
+  Class: TimBot
+  Method: useShield()
+  Test Method: UseShieldTest()
+  Message: useShield() returned true for energylevel = -1
+
+Error 2:
+  Class: TimBot
+  Method: harvestSpresso()
+  Test Method: harvestSpressoTest()
+  Message: Energy Level can not be greater than 99
+
+Error 3:
+  Class: ChickenBot
+  Method: getNextMove()
+  Test Method: getNextMoveTest()
+  Message: getNextMove() did not return correct value
+
+Error 4:
+  Class: BullyBot
+  Method: fireCannon()
+  Test Method: fireCannonTest()
+  Message: Index -1 out of bounds for length 2
+
+Error 5:
+  Class: AngryBot
+  Method: getNextMove()
+  Test Method: getNextMoveTest()
+  Message: getNextMove() did not return correct value

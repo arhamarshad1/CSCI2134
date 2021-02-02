@@ -1,0 +1,54 @@
+List of Refactoring's
+====================
+
+Name/Banner# of Developer 1: Arham Arshad B00768939
+Name/Banner# of Developer 2:
+
+Refactoring's:
+=============
+
+0. EXAMPLE:  
+   File: AngryBot.java
+   Location (method/approx. line #): getNextMove(), line 54
+   Issue Identified: Magic number
+   Description of fix:  Replaced with constant EMPTY_DISTRICT_PENALTY
+
+1. File: ChickenBot.java
+   Location (method/approx. line #): getNextMove(), line 58
+   Issue Identified: Magic number
+   Description of fix: Replaced with constant EMPTY_DISTRICT_PENALTY
+
+2. File: ChickenBot.java
+   Location (method/approx. line #): getNextMove(), line 59
+   Issue Identified: Magic Number
+   Description of fix: Replaced with constant ADJACENT_DISTRICT_PENALTY
+
+3. File: SpressoBot.java
+   Location (method/approx. line #): getNextMove(), line 52
+   Issue Identified: Poor variable name
+   Description of fix: Replaced variable i with districtIndex
+
+4. File: BullyBot.java
+   Location (method/approx. line #): fireCannon(), line 64
+   Issue Identified: Complex boolean expression
+   Description of fix: Introduced variables districtIndex and botsNearBy
+
+5. File: BullyBot.java
+   Location (method/approx. line #): fireCannon(), line 51/52
+   Issue Identified: Magic number
+   Description of fix: Introduced named constant newEnergyLevel
+
+6. File: SpressoBot.java
+   Location (method/approx. line #): getNextMove(), line 63
+   Issue Identified: Method is too long
+   Description of fix: Introduced a new method called getMoveWithLowestScore() which computes the lowest score. 
+
+7. File: ChickenBot.java
+   Location (method/approx. line #): getNextMove(), line 67
+   Issue Identified: Method is too long
+   Description of fix: Introduced a new method called getMoveWithLowestScore() which computes the lowest score. 
+
+8. File: SpressoBot.java
+   Location (method/approx. line #): getNextMove(), line 54
+   Issue Identified: Complex boolean expression
+   Description of fix: Introduced variable botWantsToMove to simplify expression. 
